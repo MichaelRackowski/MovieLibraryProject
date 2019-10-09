@@ -10,36 +10,78 @@ namespace WebAPISample.Controllers
 {
     public class MovieController : ApiController
     {
-        // GET api/values
-        public IEnumerable<string> Get()
+        private ApplicationDbContext context;
+
+        public MovieController()
         {
-            // Retrieve all movies from db logic
-            return new string[] { "movie1 string", "movie2 string" };
+            context = new ApplicationDbContext();
         }
 
-        // GET api/values/5
-        public string Get(int id)
+        // GET api/Movies
+        public IEnumerable<Movie> GetMovies()
+        {
+           // Retrieve all movies from db logic
+            return context.Movies.ToList();
+        }
+
+        // GET api/Movies/5
+        [HttpGet]
+        public Movie GetMovie(int id)
         {
             // Retrieve movie by id from db logic
-            return "value";
+            var movie = context.Movies.SingleOrDefault(c => c.MovieId == id);
+            
+            if (movie == null)
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            return movie;
         }
 
         // POST api/values
-        public void Post([FromBody]Movie value)
+        [HttpPost]
+        public Movie CreateMovie(Movie movie)
         {
-            // Create movie in db logic
+            if (!ModelState.IsValid)          
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+            
+            context.Movies.Add(movie);
+            context.SaveChanges();
+            return movie;
+
         }
 
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        // PUT api/movies/5
+        [HttpPut]
+        public void UpdateMovie(int id, Movie movie)
         {
-            // Update movie in db logic
+            if (!ModelState.IsValid)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+
+            var movieInDb = context.Movies.SingleOrDefault(c => c.MovieId == id);
+
+            if(movieInDb == null)
+                if (!ModelState.IsValid)
+                    throw new HttpResponseException(HttpStatusCode.NotFound);
+
+            movieInDb.Genre = movie.Genre;
+            movieInDb.Title = movie.Title;
+            movieInDb.DirectorName = movie.DirectorName;
+
+            context.SaveChanges();
         }
 
         // DELETE api/values/5
-        public void Delete(int id)
+        [HttpDelete]
+        public void DeleteMovie(int id)
         {
-            // Delete movie from db logic
+            var movieInDb = context.Movies.SingleOrDefault(c => c.MovieId == id);
+
+            if (!ModelState.IsValid)
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+
+            context.Movies.Remove(movieInDb);
+            context.SaveChanges();
+
+
         }
     }
 
