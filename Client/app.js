@@ -2,7 +2,7 @@
     function processForm( e ){
         var dict = {
         	Title : this["title"].value,
-            Director: this["director"].value,
+            DirectorName: this["director"].value,
             Genre: this["genre"].value
         };
 
@@ -13,6 +13,9 @@
             contentType: 'application/json',
             data: JSON.stringify(dict),
             success: function( data, textStatus, jQxhr ){
+                console.log("success");
+
+                document.getElementById("")
                 $('#response pre').html( data );
             },
             error: function( jqXhr, textStatus, errorThrown ){
@@ -25,3 +28,12 @@
 
     $('#my-form').submit( processForm );
 })(jQuery);
+function GetMovies(){
+    $.ajax({
+        url: 'https://localhost:44352/api/movie',
+        dataType : 'json',
+        type: 'Get',
+        contentType: ''
+    })
+
+}
