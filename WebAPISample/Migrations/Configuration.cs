@@ -22,15 +22,11 @@ namespace WebAPISample.Migrations
             //      new Models.Movie { Title = "Pineapple Express", Genre = "Comedy", DirectorName = "David Gordon Green" },
             //      new Models.Movie { Title = "Die Hard", Genre = "Action", DirectorName = "John McTiernan" }
 
-            //      );
 
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data.
 
-
-                //  This method will be called after migrating to the latest version.
-
-                //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-                //  to avoid creating duplicate seed data.
-           // }
+          
         }
     }
 }

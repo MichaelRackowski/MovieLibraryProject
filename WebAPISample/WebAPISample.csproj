@@ -222,9 +222,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910091300444_InitMigration.cs" />
-    <Compile Include="Migrations\201910091300444_InitMigration.Designer.cs">
-      <DependentUpon>201910091300444_InitMigration.cs</DependentUpon>
+
+
+    <Compile Include="Migrations\201910091411226_initial.cs" />
+    <Compile Include="Migrations\201910091411226_initial.Designer.cs">
+      <DependentUpon>201910091411226_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910091416508_removaloftest.cs" />
+    <Compile Include="Migrations\201910091416508_removaloftest.Designer.cs">
+      <DependentUpon>201910091416508_removaloftest.cs</DependentUpon>
+
+
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -309,12 +317,6 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Web.config" />
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="Content\Site.css" />
     <Content Include="Views\Web.config" />
@@ -343,7 +345,16 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+
+
+    <EmbeddedResource Include="Migrations\201910091411226_initial.resx">
+      <DependentUpon>201910091411226_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910091416508_removaloftest.resx">
+      <DependentUpon>201910091416508_removaloftest.cs</DependentUpon>
+
+    </EmbeddedResource>
+
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201910091300444_InitMigration.resx">
