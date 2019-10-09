@@ -222,9 +222,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910091403495_Initial.cs" />
-    <Compile Include="Migrations\201910091403495_Initial.Designer.cs">
-      <DependentUpon>201910091403495_Initial.cs</DependentUpon>
+
+    <Compile Include="Migrations\201910091411226_initial.cs" />
+    <Compile Include="Migrations\201910091411226_initial.Designer.cs">
+      <DependentUpon>201910091411226_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910091416508_removaloftest.cs" />
+    <Compile Include="Migrations\201910091416508_removaloftest.Designer.cs">
+      <DependentUpon>201910091416508_removaloftest.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -336,8 +342,13 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201910091403495_Initial.resx">
-      <DependentUpon>201910091403495_Initial.cs</DependentUpon>
+
+    <EmbeddedResource Include="Migrations\201910091411226_initial.resx">
+      <DependentUpon>201910091411226_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910091416508_removaloftest.resx">
+      <DependentUpon>201910091416508_removaloftest.cs</DependentUpon>
+
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
