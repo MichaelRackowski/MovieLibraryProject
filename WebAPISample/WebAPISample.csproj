@@ -230,10 +230,6 @@
     <Compile Include="Migrations\201910091416508_removaloftest.Designer.cs">
       <DependentUpon>201910091416508_removaloftest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910091441151_test1.cs" />
-    <Compile Include="Migrations\201910091441151_test1.Designer.cs">
-      <DependentUpon>201910091441151_test1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -343,7 +339,9 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
+
     <EmbeddedResource Include="Migrations\201910091411226_initial.resx">
       <DependentUpon>201910091411226_initial.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,9 +351,12 @@
     <EmbeddedResource Include="Migrations\201910091441151_test1.resx">
       <DependentUpon>201910091441151_test1.cs</DependentUpon>
     </EmbeddedResource>
+
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <EmbeddedResource Include="Migrations\201910091300444_InitMigration.resx">
+      <DependentUpon>201910091300444_InitMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
