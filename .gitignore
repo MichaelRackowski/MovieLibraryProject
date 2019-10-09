@@ -331,4 +331,6 @@ ASALocalRun/
 
 # ignore a single file
 Web.config
+App_Data
+Migrations
 
