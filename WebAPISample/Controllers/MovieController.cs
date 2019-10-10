@@ -39,7 +39,7 @@ namespace WebAPISample.Controllers
 
         // POST api/values
         [HttpPost]
-        public Movie CreateMovie(Movie movie)
+        public Movie CreateMovie([FromBody]Movie movie)
         {
             if (!ModelState.IsValid)          
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
@@ -52,7 +52,7 @@ namespace WebAPISample.Controllers
 
         // PUT api/movies/5
         [HttpPut]
-        public void UpdateMovie(int id, Movie movie)
+        public Movie UpdateMovie(int id,[FromBody] Movie movie)
         {
             if (!ModelState.IsValid)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
@@ -68,6 +68,7 @@ namespace WebAPISample.Controllers
             movieInDb.DirectorName = movie.DirectorName;
 
             context.SaveChanges();
+            return movieInDb;
         }
 
         // DELETE api/values/5
