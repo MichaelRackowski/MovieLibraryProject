@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>jQuery AJAX POST Form</title>
+    <title>Movie Library</title>
     <meta charset="utf-8">
 </head>
 <body>
@@ -17,9 +17,20 @@
     <button type="submit">Submit</button>
 </form>
 <br>
+<button onclick="GetMovies()">Generate all movies</button>
 <br>
 <table id="TheMovies" class="table">
+    <tr>
+    <thead>
+    <th>Title:</th>    
+    <th>Director Name:</th>
+    <th>Genre:</th>
+    </thead>
+    </tr>
+    <tbody id='MovieBody'></tbody>
 </table>
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="./app.js"></script>
