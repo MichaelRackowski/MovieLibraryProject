@@ -45,6 +45,7 @@ function GetMovies(){
                stuff+='<td>'+value.DirectorName+'</td>';
                stuff+='<td>'+value.Genre+'</td>';
                stuff+='</tr>'
+               td.setAttribute("html", "<input type=\"button\" class=\"btn\" value=\'" + value.Title + "\" onclick=\"" + chooseUser(value) + "\"/>");
            });
            $('#MovieBody').append(stuff);
         }
