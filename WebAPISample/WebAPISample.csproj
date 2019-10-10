@@ -222,13 +222,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910091411226_initial.cs" />
-    <Compile Include="Migrations\201910091411226_initial.Designer.cs">
-      <DependentUpon>201910091411226_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201910091919590_testinit.cs" />
+    <Compile Include="Migrations\201910091919590_testinit.Designer.cs">
+      <DependentUpon>201910091919590_testinit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910091416508_removaloftest.cs" />
-    <Compile Include="Migrations\201910091416508_removaloftest.Designer.cs">
-      <DependentUpon>201910091416508_removaloftest.cs</DependentUpon>
+    <Compile Include="Migrations\201910091922449_remove.cs" />
+    <Compile Include="Migrations\201910091922449_remove.Designer.cs">
+      <DependentUpon>201910091922449_remove.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -339,23 +339,12 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-
-    <EmbeddedResource Include="Migrations\201910091411226_initial.resx">
-      <DependentUpon>201910091411226_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201910091919590_testinit.resx">
+      <DependentUpon>201910091919590_testinit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910091416508_removaloftest.resx">
-      <DependentUpon>201910091416508_removaloftest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910091441151_test1.resx">
-      <DependentUpon>201910091441151_test1.cs</DependentUpon>
-    </EmbeddedResource>
-
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201910091300444_InitMigration.resx">
-      <DependentUpon>201910091300444_InitMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201910091922449_remove.resx">
+      <DependentUpon>201910091922449_remove.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
