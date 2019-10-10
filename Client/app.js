@@ -32,7 +32,6 @@
 
 function GetMovies(){
    
-   
     $.ajax({
         url: 'https://localhost:44352/api/movie',
         dataType : 'json',
@@ -50,6 +49,4 @@ function GetMovies(){
            $('#MovieBody').append(stuff);
         }
     });
-  
-
 }
