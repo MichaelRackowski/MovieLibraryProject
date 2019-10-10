@@ -14,7 +14,6 @@
             data: JSON.stringify(dict),
             success: function( data, textStatus, jQxhr ){
                 console.log("success");
-
                 document.getElementById("")
                 $('#response pre').html( data );
             },
@@ -33,7 +32,7 @@ function GetMovies(){
         url: 'https://localhost:44352/api/movie',
         dataType : 'json',
         type: 'Get',
-        contentType: ''
+        data: JSON.stringify(),
     })
 
 }
