@@ -45,6 +45,7 @@ function GetMovies(){
                stuff+="<td>"+value.DirectorName+"</td>";
                stuff+="<td>"+value.Genre+"</td>";
                stuff+="<td><button onclick='GetSingleMovie(" +value.MovieId+ ")'>Details</button>";
+               stuff+="<td><button onclick='DeleteMovie("+value.MovieId+")'>Delete</button>";
                stuff+="</tr>"
            });
            $('#MovieBody').append(stuff);
@@ -84,7 +85,6 @@ function UpdateMovie(id){
     $.ajax({
         url:'https://localhost:44352/api/movie/'+id,
         dataType: 'json',
-        contentType:'application/json',
         type: 'Put',
         data:JSON.stringify(editMovie),
         success:function(data,textStatus,jQxhr){
@@ -96,9 +96,19 @@ function UpdateMovie(id){
         }
     });
 
+}
+function DeleteMovie(id){
+    $.ajax({
+        url:'https://localhost:44352/api/movie/'+id,
+        dataType:'json',
+        type:'Delete',
+        success:function(data,textStatus,jQxhr){
+            console.log("that shit gone");
+        }
+        
+    })
 
 }
-
 //  <input type="text"name="title" placeholder="Title"/>
 //  <input type="text"name="director"placeholder="DirectorName"/>
 //  <input type="text"name="genre"placeholder="Genre"/>
