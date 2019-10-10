@@ -38,16 +38,35 @@ function GetMovies(){
         type: 'Get',
         success: function(data, textStatus, jQxhr){
            $('tbody').empty();
-           var stuff = '';
+           var stuff = "";
            $.each(data, function(index, value){
-               stuff+= '<tr>';
-               stuff+='<td>' +value.Title +'</td>';
-               stuff+='<td>'+value.DirectorName+'</td>';
-               stuff+='<td>'+value.Genre+'</td>';
-               stuff+='</tr>'
-               td.setAttribute("html", "<input type=\"button\" class=\"btn\" value=\'" + value.Title + "\" onclick=\"" + chooseUser(value) + "\"/>");
+
+               stuff+= "<tr>";
+               stuff+="<td>" +value.Title +"</td>";
+               stuff+="<td>"+value.DirectorName+"</td>";
+               stuff+="<td>"+value.Genre+"</td>";
+               stuff+="<td><button onclick='GetSingleMovie(" +value.MovieId+ ")'>Details</button>";
+               stuff+="</tr>"
+
            });
            $('#MovieBody').append(stuff);
         }
     });
+}
+function GetSingleMovie(id){
+    $.ajax({
+        url: 'https://localhost:44352/api/movie/'+id,
+        dataType:'json',
+        type:'Get',
+        success: function(data,textStatus,jQxhr){
+            var stuff = "";
+            stuff+= "<tr>";
+            stuff+="<td>" +data.Title +"</td>";
+            stuff+="<td>"+data.DirectorName+"</td>";
+            stuff+="<td>"+data.Genre+"</td>";
+            stuff+="<td><button onclick='UpdateMovie(" +value.MovieId+ ")'>Update</button>";
+            stuff+="</tr>";
+            $('#MovieBody').html(stuff);
+        }
+    })
 }
