@@ -26,7 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>3.4</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,6 +36,19 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TypeScriptTarget>ES3</TypeScriptTarget>
+    <TypeScriptJSXEmit>React</TypeScriptJSXEmit>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -222,13 +235,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910091411226_initial.cs" />
-    <Compile Include="Migrations\201910091411226_initial.Designer.cs">
-      <DependentUpon>201910091411226_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910091416508_removaloftest.cs" />
-    <Compile Include="Migrations\201910091416508_removaloftest.Designer.cs">
-      <DependentUpon>201910091416508_removaloftest.cs</DependentUpon>
+    <Compile Include="Migrations\201910101237439_initalmigration1.cs" />
+    <Compile Include="Migrations\201910101237439_initalmigration1.Designer.cs">
+      <DependentUpon>201910101237439_initalmigration1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -339,23 +348,9 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-
-    <EmbeddedResource Include="Migrations\201910091411226_initial.resx">
-      <DependentUpon>201910091411226_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910091416508_removaloftest.resx">
-      <DependentUpon>201910091416508_removaloftest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910091441151_test1.resx">
-      <DependentUpon>201910091441151_test1.cs</DependentUpon>
-    </EmbeddedResource>
-
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201910091300444_InitMigration.resx">
-      <DependentUpon>201910091300444_InitMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201910101237439_initalmigration1.resx">
+      <DependentUpon>201910101237439_initalmigration1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
