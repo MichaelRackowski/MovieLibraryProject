@@ -44,6 +44,7 @@ function GetMovies(){
                 newMovie+="<th>Genre:</th>";
                 newMovie+="</tr>";
            $.each(data, function(index, value){
+
              
                newMovie+= "<tr>";
                newMovie+="<td>" +value.Title +"</td>";
@@ -53,6 +54,7 @@ function GetMovies(){
                newMovie+="<td><button type='button' onclick='DeleteMovie("+value.MovieId+")'>Delete</button>";
                newMovie+="</tr>";
                
+
            });
            newMovie+="<tr>";
            newMovie+="<td><button type='button' onclick='MakeForm()'>Add New Movie</button>";
