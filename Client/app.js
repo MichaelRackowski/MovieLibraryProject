@@ -59,6 +59,7 @@ function GetMovies(){
            newMovie+="</tr>"
            $('#MovieBody').append(newMovie);
            $('#my-form').empty();
+           $('#edit').empty();
         
         }
        
@@ -101,6 +102,7 @@ function MakeTheFrom(id){
     editForm+="<input type='text'id='genre' name='genre' placeholder='Genre'/>";
     editForm+="<button type='button' onclick='UpdateMovie("+id+")'>Update</button>";
     $('#edit').append(editForm);
+    
     
 }
 
