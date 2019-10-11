@@ -14,15 +14,18 @@
             data: JSON.stringify(dict),
             success: function( data, textStatus, jQxhr ){
                 alert("You have successfully added a movie! Click the Generate Movie List button to reload the movies."),
+                
                 $('#response pre').html( data );
             },
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log( errorThrown );
             }
         });
+        $('#my-form').empty();
         e.preventDefault();
     }
     $('#my-form').submit( processForm );
+    
 })(jQuery);
 
 
@@ -55,6 +58,7 @@ function GetMovies(){
            newMovie+="<td><button type='button' onclick='MakeForm()'>Add New Movie</button>";
            newMovie+="</tr>"
            $('#MovieBody').append(newMovie);
+           $('#my-form').empty();
         
         }
        
@@ -68,6 +72,7 @@ function MakeForm(){
     newForm+="<input type='text'name='genre' placeholder='Genre'/>";
     newForm+="<button type='submit'>Submit</button>";
     $('#my-form').append(newForm);
+   $('tbody').empty();
     
 
 }
@@ -87,6 +92,7 @@ function GetSingleMovie(id){
         }
     })
     .then(MakeTheFrom(id));
+
 }
 function MakeTheFrom(id){
     var editForm="";

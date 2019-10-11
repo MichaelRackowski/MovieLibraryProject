@@ -6,15 +6,19 @@
     <link rel="stylesheet" type="text/css"href="bootstrap.css">
 </head>
 <body>
+<center>
+<H1>Welcome to Hannah, Micheal & Mee's Movie Library</H1>
+<h3>Click on the Generate All Movies Button to See a list of Movies:</h3>
 
 <div id="response">
     <pre></pre>
 </div>
 
 <br>
-<button onclick="GetMovies()">Generate all movies</button>
+
+<button type='button' class='button' onclick="GetMovies()">Generate all movies</button>
 <br>
-<table id="TheMovies" class="table">
+<table id="TheMovies" class="table" class ="table-primary" >
 
   
 <tbody id='MovieBody'></tbody>
@@ -24,6 +28,7 @@
 <form id="my-form">
 
 </form>
+</center>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
