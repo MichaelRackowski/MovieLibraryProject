@@ -3,34 +3,32 @@
 <head>
     <title>Movie Library</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css"href="bootstrap.css">
 </head>
 <body>
-
+<center>
+<H2>Welcome to Hannah, Micheal & Mee's Movie Library</H2>
+<h4>Click on the Generate All Movies Button to See a list of Movies:</h4>
+<img src="blockbuster-video-logo-png-transparent.png" alt="BlockBuster" height="450" width="750">
 <div id="response">
     <pre></pre>
 </div>
 
-<form id="my-form">
-    <input type="text" name="title" placeholder="Title" />
-    <input type="text" name="director" placeholder="DirectorName" />
-    <input type="text" name="genre" placeholder="Genre"/>
-    <button type="submit">Submit</button>
-</form>
 <br>
-<button onclick="GetMovies()">Generate all movies</button>
+
+<button type='button' class='button' onclick="GetMovies()">Generate all movies</button>
 <br>
-<table id="TheMovies" class="table">
-    <tr>
-    <thead>
-    <th>Title:</th>    
-    <th>Director Name:</th>
-    <th>Genre:</th>
-    </thead>
-    </tr>
+<table id="TheMovies" class="table" class ="table-primary" >
+
+  
 <tbody id='MovieBody'></tbody>
 </table>
 <form id="edit"></form>
 
+<form id="my-form">
+
+</form>
+</center>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
